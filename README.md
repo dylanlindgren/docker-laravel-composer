@@ -1,2 +1,2 @@
-docker-composer
+docker-laravel-composer
 ===============
