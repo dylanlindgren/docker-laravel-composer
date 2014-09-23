@@ -2,18 +2,18 @@ FROM dylanlindgren/docker-phpcli:latest
 
 MAINTAINER "Dylan Lindgren" <dylan.lindgren@gmail.com>
 
-RUN mkdir -p /data/www
-WORKDIR /data/www
+WORKDIR /tmp
 
 RUN apt-get update -y && \
-    apt-get install -y curl git && \
+    apt-get install -y curl git php5-mcrypt && \
     curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer && \
-    apt-get remove -purge curl -y && \
+    apt-get remove --purge curl -y && \
     apt-get clean
 
-RUN useradd --uid 2000 composer
-USER composer
+RUN mkdir -p /data/www
+VOLUME ["/data"]
+WORKDIR /data/www
 
 ENTRYPOINT ["composer"]
 CMD ["--help"]
