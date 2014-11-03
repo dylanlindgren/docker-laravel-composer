@@ -1,5 +1,7 @@
 dylanlindgren/docker-laravel-composer
 ====================
+![Docker + Laravel](https://cloud.githubusercontent.com/assets/6241518/4891719/1cfcc9a0-63ab-11e4-8a2a-cce53e53eb19.jpg)
+
 This is a [Docker](http://www.docker.com) image for the [Composer command line interface](https://getcomposer.org), intended for use in the fashion described on my series of blog articles about using Docker and the [Laravel PHP framework](http://www.laravel.com) together:
 
 1. [Docker for the Laravel framework](http://dylanlindgren.com/docker-for-the-laravel-framework) (24 Sep 2014)
